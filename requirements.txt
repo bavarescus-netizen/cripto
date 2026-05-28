@@ -1,0 +1,14 @@
+python-telegram-bot==20.7
+python-binance==1.0.19
+pandas==2.1.4
+numpy==1.26.3
+ta==0.11.0
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.25
+alembic==1.13.1
+python-dotenv==1.0.0
+aiohttp==3.9.1
+asyncio==3.4.3
+apscheduler==3.10.4
+colorlog==6.8.2
+httpx==0.26.0
