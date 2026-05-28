@@ -2,7 +2,6 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Dependencias del sistema
 RUN apt-get update && apt-get install -y \
     gcc \
     libpq-dev \
@@ -13,6 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN mkdir -p src && touch src/__init__.py
+RUN touch src/__init__.py
+
+EXPOSE 10000
 
 CMD ["python", "main.py"]

@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: crypto-scalping-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_ADMIN_ID
+        sync: false
+      - key: BINANCE_API_KEY
+        sync: false
+      - key: BINANCE_SECRET_KEY
+        sync: false
+      - key: BINANCE_TESTNET
+        value: "true"
+      - key: DATABASE_URL
+        sync: false
+      - key: INITIAL_CAPITAL
+        value: "1000"
+      - key: MAX_RISK_PER_TRADE
+        value: "2"
+      - key: COMPOUND_REINVEST
+        value: "80"
+      - key: MAX_OPEN_TRADES
+        value: "3"
+      - key: BOT_MODE
+        value: "demo"
+      - key: PORT
+        value: "10000"
